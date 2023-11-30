@@ -1,0 +1,48 @@
+.footer_wrapper{
+  display: flex;
+  justify-content: space-between;
+
+}
+.social{
+  display: flex;
+  flex-direction: column;
+}
+.icons{
+
+  display: flex;}
+.icons a{
+  margin-right: 20px;}
+footer{
+  background: #0C0C0E;
+  color: #FFFFFF;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.rs_school{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  padding-bottom: 40px;
+padding-top: 68px;
+  &::before{
+    content:'';
+    position: absolute;
+    height: 1px;
+    background: #FFFFFF;
+    width: 1440px;
+    top: 20px;
+  }
+}
+.hours p{
+  text-align: end;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+}
+.social p{
+  text-align: start;
+  font-size: 15px;
+  margin-bottom: 27px;
+}

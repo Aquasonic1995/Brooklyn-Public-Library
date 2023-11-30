@@ -1,0 +1,196 @@
+.favorites {
+  display: flex;
+  flex-direction: column;
+}
+
+.favorites ul {
+  margin-top: 10px;
+  display: flex;
+  list-style: none;
+}
+
+.favorites li {
+  color: #0C0C0E;
+
+  &:first-child {
+
+  }
+}
+
+.pick {
+  margin-bottom: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0;
+}
+
+.seasons {
+  margin-bottom: 13px;
+}
+
+.book button {
+  position: absolute;
+  bottom: 16px;
+  left: 12px;
+  padding: 5px 28px;
+}
+
+.favorites button:active {
+  background: #BB945F;
+  border: none
+
+}
+
+.favorites .book:nth-child(4) button {
+  color: #BB945F;
+  border: 1px solid #BB945F;
+}
+
+.favorites .book:nth-child(4) button:active {
+  color: #BB945F;
+  border: 1px solid #BB945F;
+  background: buttonface;
+}
+
+.favorites input {
+  appearance: none;
+  width: 1.25em;
+  height: 1.25em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: text-bottom;
+  position: relative;
+  font-weight: 400;
+  margin-right: 10px;
+  margin-bottom: 5px;
+
+}
+
+.favorites label:first-child {
+  font-weight: 600;
+}
+
+.favorites input::before {
+  content: '';
+  position: absolute;
+  margin: auto;
+  left: -1px;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  top: 0;
+
+}
+
+.favorites input[type=radio]::before {
+  height: 0;
+  width: 0;
+}
+
+.favorites input[type=radio]:checked::before {
+  border: 5px solid transparent;
+  border-radius: 100%;
+  outline-offset: -6px;
+  background: #000;
+  font-weight: 600;
+}
+
+.books {
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  justify-content: space-between;
+  align-items: end;
+  @media screen and (max-width: 1300px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}
+
+.book {
+  padding: 15px 20px;
+  border: #0C0C0E 1px solid;
+  width: 505px;
+  height: 528px;
+  margin-bottom: 40px;
+  position: relative;
+  @media screen and (max-width: 1300px) {
+    justify-self: center;
+    margin-right: 0;
+
+  }
+
+  &:nth-child(2), &:nth-child(4) {
+    justify-self: end;
+    margin-right: 50px;
+    @media screen and (max-width: 1300px) {
+      justify-self: center;
+      margin-right: 0;
+
+    }
+  }
+}
+
+.book img {
+  position: absolute;
+  bottom: 0;
+  right: -40px;
+
+}
+
+label {
+  margin-left: 80px;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.staff {
+  font-family: 'Forum', cursive;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 48px;
+  position: relative;
+
+  &:after {
+    content: '';
+    background: #BB945F;
+    width: 50px;
+    height: 1px;
+    position: absolute;
+    bottom: 4px;
+    text-align: center;
+    left: -3px;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: 'Enter', sans-serif;
+  line-height: 67px;
+}
+
+.author {
+  font-weight: 600;
+  font-family: 'Enter', sans-serif;
+  line-height: 17px;
+  margin-bottom: 30px;
+}
+
+.annotation {
+  font-family: 'Enter', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 40px;
+  width: 355px;
+  letter-spacing: 3px;
+
+}

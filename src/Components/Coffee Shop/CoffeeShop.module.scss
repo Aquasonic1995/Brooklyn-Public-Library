@@ -1,0 +1,90 @@
+.coffee_shop{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+}
+.coffee_shop p{
+  margin-bottom: 40px;
+}
+.menu{
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 1300px){
+    flex-direction: column;
+  }
+
+}
+
+.coffee_shop p{
+  margin-top: 0;
+  margin-bottom: 37px;
+  line-height: 40px;
+}
+.name{
+  font-family: 'Forum', cursive;
+  font-weight: 400;
+  font-size: 40px;
+  color:#BB945F;
+  width: 454px;
+  height: 533px;
+}
+.name:nth-child(2) {
+  @media screen and (max-width: 1300px) {
+align-self: flex-end;
+  }
+}
+.title{
+  font-family: 'Enter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #0C0C0E;
+  margin-bottom: 40px;
+}
+.coffee_shop span{
+  display: inline-block;
+margin-bottom: 40px;
+
+
+}
+.coffee_shop span:nth-child(2){
+  display: inline-block;
+  margin-bottom: 40px;
+  margin-left: 10px;
+
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+  line-height: 40px;
+}
+.container_2{
+  display: flex;
+  line-height: 40px;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+}
+.number{
+  font-family: 'Enter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #0C0C0E;
+  margin-bottom: 40px;
+}
+.line{
+  width :100px;
+  height: 1px;
+  background: #BB945F;
+  margin-bottom: 64px;
+  margin-right: 60px;
+  margin-left: 60px;
+}
+ .coffee_shop span:last-child{
+  margin-left: 10px;
+}
+ .wrapper{
+   display: flex;
+   flex-direction: column;
+align-items: flex-end;
+ }
