@@ -10,9 +10,14 @@ import cn from "clsx";
 
 function About() {
     const [page, setPage] = useState(1);
+
+
+let rs='It\'s cool'
+
     return (
+
         <section className={s.about} id="about">
-            <h2>About</h2>
+            <h2 >About</h2>
             <div className={s.some_text}>
                 The Brooklyn Library is a free workspace, a large number of books and a
                 cozy coffee shop inside

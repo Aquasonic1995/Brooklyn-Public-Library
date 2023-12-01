@@ -12,25 +12,25 @@ function CoffeeShop() {
                 can try desserts from bakery.</p>
             <div className={s.menu}>
                 <div className={s.name}><span>Coffee & Tea</span>
-                    {coffeeTea.map((item) => (<>
-                            <div className={s.container}>
+                    {coffeeTea.map((item,i) => (
+                            <div className={s.container} key={i}>
                                 <div className={s.title}>{item.title}</div>
                                 <div className={s.number}>${item.price}</div>
                             </div>
-                        </>
+
                     ))}
                 </div>
 
                 <div className={s.name}>
                     <div className={s.wrapper}>
                         <span>Desserts & Cakes</span>
-                        {dessertsCakes.map((item) => (<>
-                                <div className={s.container_2}>
+                        {dessertsCakes.map((item,i) => (
+                                <div className={s.container_2} key={i}>
                                     <div className={s.title}>{item.title}</div>
                                     <div className={s.line}></div>
                                     <div className={s.number}>{item.price}</div>
                                 </div>
-                            </>
+
                         ))}
                     </div>
                 </div>

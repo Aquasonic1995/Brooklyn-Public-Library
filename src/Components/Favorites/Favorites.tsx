@@ -22,8 +22,8 @@ function Favorites() {
                 </label>
             </ul>
             <div className={s.books}>
-                {data.map((book) => (
-                    <div className={s.book}>
+                {data.map((book,i) => (
+                    <div className={s.book} key={i}>
                         <div className={s.staff}>Staff Picks</div>
                         <div className={s.title}>{book.title}</div>
                         <div className={s.author}>By  {book.author}</div>
