@@ -195,24 +195,6 @@ label {
 
 }
 
-//.winter, .summer, .spring, .autumn{
-//  transition: 1s;
-//  animation: fadeInOutAnimation  linear 2s;
-//
-//}
-//@keyframes fadeInOutAnimation {
-//  0% {
-//    opacity: 0;
-//  }
-//
-//  50% {
-//    opacity: 1;
-//  }
-//
-//  100% {
-//    opacity: 0;
-//  }
-//}
 .fadeIn {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;

@@ -4,6 +4,7 @@ header {
   background: #0C0C0E;
   vertical-align: middle;
   height: 90px;
+
 }
 
 .h1 {
@@ -52,6 +53,7 @@ header {
 .menu_wrapper {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 
 
   & div:nth-child(1) {
@@ -111,3 +113,17 @@ header {
     opacity: 0;
   }
 }
+.modalLogIn{
+  background: white;
+  width: 300px;
+  height: 400px;
+  z-index: 10;
+  &::backdrop{
+    background: #8e8e8e;
+    opacity: 0.6;
+  }
+}
+.logInOpened{
+  display: block;
+}
+

@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import s from './Favorites.module.scss'
 import data from "../../Redux/store";
-import cn from "clsx";
+import Modal from "../UI/ModalWindow/Modal";
+
 
 function Favorites() {
+
     const [season, setSeason] = useState(data.winter)
     const [fade, setFade] = useState(false);
     useEffect(() => {
@@ -17,23 +19,31 @@ function Favorites() {
         return () => clearTimeout(timeout);
     }, [season]);
     const changeSeasonWinter = () => {
-       setFade(false)
-        setTimeout(()=>{setSeason(data.winter)},500)
+        setFade(false)
+        setTimeout(() => {
+            setSeason(data.winter)
+        }, 500)
 
     }
     const changeSeasonSpring = () => {
         setFade(false)
-        setTimeout(()=>{  setSeason(data.spring)},500)
+        setTimeout(() => {
+            setSeason(data.spring)
+        }, 500)
 
     }
     const changeSeasonSummer = () => {
         setFade(false)
-        setTimeout(()=>{ setSeason(data.summer)  },500)
+        setTimeout(() => {
+            setSeason(data.summer)
+        }, 500)
 
     }
     const changeSeasonAutumn = () => {
         setFade(false)
-        setTimeout(()=>{   setSeason(data.autumn)  },500)
+        setTimeout(() => {
+            setSeason(data.autumn)
+        }, 500)
 
     }
 
@@ -43,7 +53,8 @@ function Favorites() {
             <div className={s.pick}>Pick favorites of season</div>
             <ul className={s.seasons}>
                 <label htmlFor="winter">
-                    <li><input type="radio" id='winter' name='year' onChange={changeSeasonWinter} defaultChecked/>Winter</li>
+                    <li><input type="radio" id='winter' name='year' onChange={changeSeasonWinter} defaultChecked/>Winter
+                    </li>
                 </label>
                 <label htmlFor="spring">
                     <li><input type="radio" id='spring' name='year' onChange={changeSeasonSpring}/>Spring</li>

@@ -1,4 +1,4 @@
-import s from "./Navigation.module.scss";
+  import s from "./Navigation.module.scss";
 import React from "react";
 
 const Navigation = () => {
