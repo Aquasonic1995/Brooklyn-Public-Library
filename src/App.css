@@ -64,3 +64,13 @@ section {
 iframe{
     max-width: 100%;
 }
+
+.fadeIn {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fadeOut {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
