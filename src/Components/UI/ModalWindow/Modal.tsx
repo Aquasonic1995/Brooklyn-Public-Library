@@ -1,23 +1,34 @@
-import s from "../../Header/Header.module.scss";
-import React, {useRef} from "react";
-import {useOnClickOutside} from "usehooks-ts";
+import s from "../../UI/ModalWindow/Modal.module.scss";
+import React, {useEffect, useRef} from "react";
+
 type ModalType={
-    modal:HTMLDialogElement | null
     id:string
 }
-const Modal: React.FC<ModalType>= (props:ModalType) => {debugger;
-    // const modalLogIn = document.getElementById("modal") as HTMLDialogElement | null;
-    const ref2 = useRef(null);
-    const handleClickOutside = () => {
-        // Your custom logic here
-        props.modal?.close()
 
+
+
+const Modal: React.FC<ModalType>= (props:ModalType) => {
+    const modalRef = useRef<HTMLDialogElement | null>(null);
+    useEffect(() => {
+        modalRef.current = document.getElementById(`${props.id}`) as HTMLDialogElement | null;
+    }, [props.id]); // Run this effect only once when the component mounts
+
+    const closeModal = (event: React.MouseEvent) => {
+        // Stop propagation if the click occurs inside the "stop" div
+        if (event.target && (event.target as HTMLElement).closest('#stop')) {
+            event.stopPropagation();
+            return;
+        }
+        modalRef.current?.close();
     };
 
-    useOnClickOutside(ref2, handleClickOutside);
+
     return (
-       <dialog ref={ref2} id={props.id} className={s.modalLogIn}>
-            <button onClick={()=>props.modal?.close()}>close</button>
+        <dialog  id={props.id} className={s.modalLogIn} onClick={closeModal}>
+            <div className={s.stop} id="stop">
+                <button onClick={closeModal}>close</button>
+            </div>
+
         </dialog>
     );
 }
